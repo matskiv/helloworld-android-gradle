@@ -9,6 +9,6 @@ node('android') {
     sh "./gradlew clean assembleDebug"
 
     stage 'Archive'
-    archive 'app/build/outputs/apk/*.apk', excludes: 'app/build/outputs/apk/*-unaligned.apk'
+    archiveArtifacts includes: 'app/build/outputs/apk/*.apk', excludes: 'app/build/outputs/apk/*-unaligned.apk'
 }
 
